@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="build/react.js"></script>
+	<script src="build/JSXTransformer.js"></script>
+	<title></title>
+</head>
+<body>
+<div id="mount-point"></div>
+<script type="text/jsx">
+/** @jsx React.DOM */
+	var MyComponent	= React.createClass({
+		render: function(){
+			return(
+				<h1>Hello, {this.props.name}</h1>
+				);
+		}
+	});
+
+	React.renderComponent(<MyComponent name="mahesh"/>, document.getElementById('mount-point'))
+</script>
+</body>
+</html>
