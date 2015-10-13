@@ -10,9 +10,22 @@
 <script type="text/jsx">
 /** @jsx React.DOM */
 	var MyComponent	= React.createClass({
+		incrementCount: function(){
+			this.setState({
+				count: this.state.count + 1
+			})
+		},
+		getInitialState: function(){
+			return{
+				count: 5
+			}
+		},
 		render: function(){
 			return(
-				<h1>Hello, {this.props.name}</h1>
+				<div>
+				<h1>Hello, {this.props.name}, {this.state.count}</h1>
+				<button onClick={this.incrementCount}>CLick here</button>
+				</div>
 				);
 		}
 	});
